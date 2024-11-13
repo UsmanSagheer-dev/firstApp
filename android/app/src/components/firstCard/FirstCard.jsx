@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { Images } from '../../../assets/images/images';
 
-// Replace this with a direct path to the image file for testing purposes
-// Ensure the image file exists in the specified path
 function FirstCard() {
   return (
     <View style={styles.card}>
       <Image 
         style={styles.image} 
-        source={require('../../../assets/images/images')} // Replace with actual image path
+        source={Images.WELCOME_IMAGE} 
       />
       <View style={styles.content}>
         <Text style={styles.title}>Card Title</Text>
