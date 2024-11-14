@@ -1,22 +1,21 @@
 import React from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-
+import {View, TextInput, StyleSheet, Image} from 'react-native';
+import {Images} from '../../assets/images/images';
 function SearchInput() {
   return (
     <View style={styles.container}>
-      {/* Search Icon */}
-      <Icon name="ios-search" size={20} color="#A9A9A9" style={styles.icon} />
+     
+      <Image source={Images.SEARCH_ICON} style={styles.icon} />
 
-      {/* Text Input */}
+    
       <TextInput
         style={styles.input}
         placeholder="Search keywords..."
-        placeholderTextColor="#A9A9A9"
+        placeholderTextColor="#868889"
+       
       />
 
-      {/* Filter Icon */}
-      <Icon name="ios-options-outline" size={20} color="#A9A9A9" style={styles.filterIcon} />
+      <Image source={Images.FILTER} style={styles.filterIcon} />
     </View>
   );
 }
@@ -25,23 +24,32 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F0F0F0', // Light gray background
+    backgroundColor: '#F0F0F0',
     borderRadius: 5,
     paddingHorizontal: 10,
     height: 40,
-    borderColor: '#007BFF', // Border color
+    borderColor: '#007BFF',
     borderWidth: 1,
+    marginTop:51,
+
   },
   icon: {
-    marginRight: 8, // Space between icon and text input
+    marginRight: 8,
+    width: 20,
+    height: 20,
+
   },
   input: {
-    flex: 1, // Fills the remaining space
+    flex: 1,
     fontSize: 16,
     color: '#333',
+    fontWeight:'900'
   },
   filterIcon: {
-    marginLeft: 8, // Space between text input and filter icon
+    width: 20,
+    height: 20,
+   
+    marginLeft: 30,
   },
 });
 
