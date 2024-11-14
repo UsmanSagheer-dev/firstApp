@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView } from 'react-native';
 import WelcomeScreen from './android/app/src/screens/WelcomeScreen';
+// import HomeScreen from './android/app/src/screens/HomeScreen';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView style={styles.container}>
           <WelcomeScreen />
+          {/* <HomeScreen/> */}
         </ScrollView>
       </SafeAreaView>
     </>
