@@ -1,18 +1,16 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import { Images } from '../../../assets/images/images';
+import {View, Text, Image, StyleSheet} from 'react-native';
+import {Images} from '../../../assets/images/images';
 
 function FirstCard() {
   return (
     <View style={styles.card}>
-      <Image 
-        style={styles.image} 
-        source={Images.WELCOME_IMAGE} 
-      />
+      <Image style={styles.image} source={Images.WELCOME_IMAGE} />
       <View style={styles.content}>
         <Text style={styles.title}>Card Title</Text>
         <Text style={styles.description}>
-          This is a description of the card content. It gives more details about the topic shown.
+          This is a description of the card content. It gives more details about
+          the topic shown.
         </Text>
       </View>
     </View>
@@ -24,7 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.3,
     shadowRadius: 5,
     elevation: 3,
