@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, ImageBackground} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import BoxWithHeadingAndImage from '../components/boxwithHeadingandImage/BoxwithHeadingandImage';
 import {Images} from '../assets/images/images';
 import Button from '../components/buttoncomp/ButtonComp';
 
 function WelcomeScreen() {
+  const navigation = useNavigation();
   return (
     <ImageBackground
       source={Images.WELCOME_IMAGE}
@@ -22,7 +24,7 @@ function WelcomeScreen() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <Button heading="Get started" />
+        <Button heading="Get started" onPress={()=>navigation.navigate('Home')} />
       </View>
     </ImageBackground>
   );
